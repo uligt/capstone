@@ -1,0 +1,7 @@
+feature,method,score
+Weight,correlation,-0.04342013340061707
+Collection,mutual_info,0.050210612099176766
+Size,mutual_info,0.03771159343351016
+GarmentType,mutual_info,0.028289338042135848
+Material,mutual_info,0.023099616175727533
+Weight,mutual_info,0.0020740573415434227
