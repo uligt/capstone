@@ -24,7 +24,6 @@ CREATE TABLE Packaging_Results (
         ProposedFoldingMethod,
         ProposedLayout,
         Size,
-        Collection,
-        Probability
+        Collection
     )
 );
