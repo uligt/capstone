@@ -1,0 +1,21 @@
+artifact_path: packaging_quality_default_model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.17
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 2.22.0
+model_size_bytes: 3296517
+model_uuid: 20dede1e082644b690d3ffb477e2b84d
+prompts: null
+run_id: funny_collar_h559vvpzg9
+utc_time_created: '2025-06-02 02:09:51.935381'
