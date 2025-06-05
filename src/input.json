@@ -1,0 +1,23 @@
+{
+  "input_data": {
+    "index": [0, 1],
+    "columns": [
+      "SupplierName",
+      "GarmentType",
+      "Material",
+      "Weight",
+      "ProposedUnitsPerCarton",
+      "ProposedFoldingMethod",
+      "ProposedLayout",
+      "Size",
+      "Collection"
+    ],
+    "data": [
+      ["SupplierC", "Shorts", "Polyester", 0.22, 31, "Method1", "LayoutA", "XS", "Spring"],
+      ["SupplierH", "Shirt", "Polyester", 0.16, 45, "Method2", "LayoutA", "L", "Summer"],
+      ["SupplierC", "Skirt", "Cotton", 0.30, 30, "Method2", "LayoutC", "M", "Summer"],
+      ["SupplierA", "Coat", "Cotton", 1.29, 6, "Method1", "LayoutD", "M", "Spring"],
+      ["SupplierA", "Jacket", "Cotton", 0.91, 14, "Method1", "LayoutC", "L", "Spring"]
+    ]
+  }
+}
