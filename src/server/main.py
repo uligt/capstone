@@ -84,7 +84,7 @@ def build_request_data(orderDetails: OrderDetails):
 def execute_request(body):
     url = 'https://pckg-quality-endpoint.eastus.inference.ml.azure.com/score'
     
-    api_key = 'ELpNISNoOF6MsyE6fpgH5jFrk93kHlAzDiOWtMZr9xfuYoJQ63UZJQQJ99BFAAAAAAAAAAAAINFRAZML1J6e'
+    api_key = ''
     if not api_key:
         raise Exception("A key should be provided to invoke the endpoint")
 
