@@ -1,4 +1,4 @@
 run fast api server:
-`python -m fastapi dev ./server/main.py`
+`python -m fastapi dev ./src/server/main.py`
 
 
