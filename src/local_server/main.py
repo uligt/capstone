@@ -1,4 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile, HTTPException, Query, Request
+from fastapi.openapi.docs import get_swagger_ui_html, get_swagger_ui_oauth2_redirect_html
+from fastapi.responses import JSONResponse, HTMLResponse, RedirectResponse
 from pydantic import BaseModel, Field
 from typing import List, Dict
 import urllib.request
@@ -151,3 +153,40 @@ async def packaging_configs(data: OrderDetails) -> List[PackagingConfigurations]
     return configurations
     
 
+@app.post("/audit")
+async def process_excel(
+    threshold: float = Query(..., description="Threshold value to filter numeric cells"),
+    file: UploadFile = File(..., description="Excel file to process (.xls or .xlsx)")
+):
+    # Ensure we got an Excel file
+    if not file.filename.lower().endswith((".xls", ".xlsx")):
+        raise HTTPException(status_code=400, detail="File must be an Excel document")
+
+    # Read the uploaded file into a pandas DataFrame
+    try:
+        contents = await file.read()
+        df = pd.read_excel(contents, engine='openpyxl')
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error reading Excel file: {e}")
+
+    # Example processing: filter numeric columns for any value > threshold
+    numeric_cols = df.select_dtypes(include="number").columns
+    if numeric_cols.empty:
+        return JSONResponse(
+            status_code=200,
+            content={"message": "No numeric columns found", "threshold": threshold}
+        )
+
+    # Build a mask: rows where at least one numeric cell exceeds the threshold
+    mask = df[numeric_cols].gt(threshold).any(axis=1)
+    filtered = df[mask]
+
+    # Convert filtered DataFrame to JSON-friendly structure
+    result = filtered.to_dict(orient="records")
+
+    return {
+        "threshold": threshold,
+        "total_rows": len(df),
+        "rows_above_threshold": len(filtered),
+        "filtered_data": result
+    }
