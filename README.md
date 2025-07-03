@@ -1,3 +1,5 @@
+ℹ️ **Please see individual subdirectories for futher details.**
+
 # Context
 
 The Fashion Retail industry faces a structural challenge in managing product packaging and folding, which impacts the entire supply chain, operational efficiency, and ultimately, the customer experience. 
@@ -16,13 +18,11 @@ Together, these issues result in a reactive operation with limited systemic visi
 # Proposed Solution
 The proposed solution is to build around the integrated components designed to improve packaging and folding processes across the supply chain:
 
-Data-Driven Packaging and Folding Recommendations: Automatically generates optimal packaging and folding instructions based on product type and historical performance. These recommendations aim to reduce variability and improve standardization across suppliers.
-Intelligent Risk Matrix (Supplier-Product Level): Classifies suppliers by their historical performance and commercial relevance, assigning each a risk level (high, medium, low). This determines the appropriate audit frequency and intensity, optimizing resource allocation for quality control.
-Evolution of Audit Processes: Transitions from fully manual audits to a hybrid and eventually digital-first model. Incorporates mobile tools for capturing deviations, supports real-time tracking, and enables automated triggers for post-audit actions.
-Post-Audit Decision Framework: Based on audit results, the system supports automated decisions such as whether to proceed with repackaging, initiate a return process, or escalate issues. This reduces delays and promotes consistent responses.
-Reporting Dashboard: Provides a centralized view of key indicators related to compliance and adherence to the packaging and folding recommendations. Includes metrics such as guideline adherence, rework rates, audit scores and analytics insights from the machine learning models
+- Data-Driven Packaging and Folding Recommendations: Automatically generates optimal packaging and folding instructions based on product type and historical performance. These recommendations aim to reduce variability and improve standardization across suppliers.
+- Intelligent Risk Matrix (Supplier-Product Level): Classifies suppliers by their historical performance and commercial relevance, assigning each a risk level (high, medium, low). This determines the appropriate audit frequency and intensity, optimizing resource allocation for quality control.
+- Evolution of Audit Processes: Transitions from fully manual audits to a hybrid and eventually digital-first model. Incorporates mobile tools for capturing deviations, supports real-time tracking, and enables automated triggers for post-audit actions.
+- Post-Audit Decision Framework: Based on audit results, the system supports automated decisions such as whether to proceed with repackaging, initiate a return process, or escalate issues. This reduces delays and promotes consistent responses.
+- Reporting Dashboard: Provides a centralized view of key indicators related to compliance and adherence to the packaging and folding recommendations. Includes metrics such as guideline adherence, rework rates, audit scores and analytics insights from the machine learning models
+
 
 By unifying historically fragmented data, operationalizing four machine-learning models, and visualizing their outputs in two complementary dashboard views, the project replaces ad-hoc inspections and costly rework with an end-to-end, evidence-based decision system.
-
-
-Please see individual subdirectories for futher details.
