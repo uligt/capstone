@@ -11,3 +11,5 @@ Details sepecific to the application are found under 'application' subdirectory
 ```bash
 python -m fastapi dev ./server/main.py
 ```
+
+![capstone_model1](https://github.com/user-attachments/assets/486eb8a7-3c90-4321-9e4b-b5693ed81631)
