@@ -1,0 +1,26 @@
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container at /app
+COPY requirements.txt .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application's code into the container
+# Note: The 'COPY . .' command below would also copy your folder if it's
+# in the same directory. Adding the explicit 'COPY' line above is a
+# clearer way to manage specific files and folders.
+COPY . .
+
+# Expose the port that Streamlit runs on
+EXPOSE 8501
+
+# Define the command to run your app
+# This command tells Streamlit to run your Python script and listen on all network interfaces.
+# It also disables the file watcher for better performance in a container.
+CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.fileWatcherType=none"]
